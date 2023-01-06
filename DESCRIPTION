@@ -1,0 +1,11 @@
+Package: portfouri
+Title: Functions to make it easier to navigate this database.
+Version: 1.0
+Authors@R: 
+    person("Youri", "Lam", , "youri.lam@student.hu.nl", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: What the package does (one paragraph).
+License: use_mit_license()
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
