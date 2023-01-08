@@ -14,11 +14,11 @@ life_expectancy_graph <- function(continent_wanted, year_wanted){
     arrange(Country)
   plotting <- countries_Wanted %>% ggplot(aes(x = Country, y = life_expectancy, fill = Country))+
     geom_col() +
-    labs(title = "Beter doet ie het",
-         subtitle = "Anders ga ik huilen",
-         caption = "Amen",
-         x = "Country in requested continent",
-         y = "Life expectancy in requested year") +
-    theme_classic()
+    labs(title = "Life expectancy in different countries from a continent in a specific year",
+         x = "Countries in requested continent",
+         y = "Life expectancy") +
+    theme_minimal()+
+    theme(axis.ticks.x=element_blank())
   plotting
 }
+
