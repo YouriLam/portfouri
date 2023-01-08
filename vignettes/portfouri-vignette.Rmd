@@ -1,4 +1,7 @@
-# Portfouri
+---
+title: "portfouri"
+output: rmarkdown::html_vignette
+---
 
 # Introduction
 
@@ -51,3 +54,4 @@ The last function is made so you can find the total population for the country, 
 spain_2002 <- population_finder("Spain","2002")
 spain_2012 <- population_finder("Spain","2012")
 ```
+
