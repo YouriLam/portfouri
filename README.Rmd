@@ -1,0 +1,56 @@
+---
+output: github_document
+---
+
+# Introduction
+
+This vignette describes the use of the 'portouri' package. The functions within this package can be used to speed up the progress of searching data or making graphs with the found data. It has originally been used to support a portfolio and the assignments within it and probably won't be very useful outside of this assignment.
+
+The package contains the following functions:
+<ul>
+<li>cont_finder</li>
+<li>cou_finder</li>
+<li>life_expectany_graph</li>
+<li>population_finder</li>
+</ul>
+
+In this vignette you'll learn the application of these functions. First we load the needed packages and the dataset.Make sure you have a raw_data folder with the package.csv file in it. The file can be found in the raw_data on github.
+
+```{r setup, eval=FALSE}
+devtools::install_github("YouriLam/portfouri")
+library(portfouri)
+library(ggplot2)
+library(dplyr)
+```
+
+# cont_finder
+
+The first function focuses on data review. Sometimes you want to work with certain continents, but you don't know if a country actually falls under that continent. Turkey is a great example of this, seeing as it is sometimes referred to as a European country and other times as a Asian country. With this function, the input requires a simple name of a country and the continent will be given as a response. The example is given down below.
+
+```{r cont_finder}
+cont_finder("Spain")
+```
+
+# country_finder
+It works the other way around too. This package gives you all the countries that reside in a specific continent. This can be used in the following example:
+
+```{r country_finder}
+european_countries <- cou_finder("Europe")
+european_countries
+```
+
+#life_expectancy_graph
+For my previous assignment I wanted to make a graph that showed the life expectancy of a specific continent in a specific year. This is the exact function to do that. It looked like this:
+
+```{r life_Expectancy}
+life_expectancy_graph("Europe","2012")
+```
+
+#population_finder
+The last function is made so you can find the total population for the country, during the year of your choice.This is very helpful if you want to know how the population has grown/shrunk in the last 10 years:
+
+```{r population_finder}
+spain_2002 <- population_finder("Spain","2002")
+spain_2012 <- population_finder("Spain","2012")
+```
+
